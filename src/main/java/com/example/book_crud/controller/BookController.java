@@ -2,6 +2,7 @@ package com.example.book_crud.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.example.book_crud.controller.utils.Result;
+import com.example.book_crud.dao.BookDao;
 import com.example.book_crud.domain.Book;
 import com.example.book_crud.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,9 @@ public class BookController {
 
     @Autowired
     private BookService bookService;
+
+    @Autowired
+    private BookDao bookDao;
 
     @GetMapping
     public Result queryAll(){
